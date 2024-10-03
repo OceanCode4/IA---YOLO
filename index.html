@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marine Pollution Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header com carrossel de imagens -->
+    <header>
+        <div class="carousel">
+            <div class="carousel-slide">
+                <img src="image1.jpg" alt="Oceano Limpo">
+                <div class="carousel-text">
+                    Salve o oceano, reduza a poluição.
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="image2.jpg" alt="Detecção de Lixo">
+                <div class="carousel-text">
+                    A tecnologia ajuda a monitorar o lixo marinho.
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção de detecção de lixo ao vivo -->
+    <section class="live-detection">
+        <h2>Detecção de Lixo ao Vivo</h2>
+        <div class="video-container">
+            <video id="webcam" autoplay></video>
+            <div class="stats">
+                <h3>Lixo detectado:</h3>
+                <p id="detected-trash">0 itens</p>
+            </div>
+        </div>
+        <button id="startDetection">Iniciar Detecção</button>
+    </section>
+
+    <!-- Informações sobre poluição marinha -->
+    <section class="info-section">
+        <h2>Riscos da Poluição Marinha</h2>
+        <div class="info-grid">
+            <div class="info-box">
+                <img src="plastic-icon.png" alt="Poluição por Plástico">
+                <h3>Poluição por Plástico</h3>
+                <p>O plástico é uma das principais ameaças aos oceanos, afetando a vida marinha.</p>
+            </div>
+            <div class="info-box">
+                <img src="oil-icon.png" alt="Derramamento de Óleo">
+                <h3>Derramamento de Óleo</h3>
+                <p>Derramamentos de óleo criam zonas mortas nos oceanos, devastando ecossistemas.</p>
+            </div>
+            <div class="info-box">
+                <img src="metal-icon.png" alt="Resíduos Metálicos">
+                <h3>Resíduos Metálicos</h3>
+                <p>Materiais metálicos poluem a água e são difíceis de remover.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé com dados ao vivo -->
+    <footer>
+        <div class="footer-content">
+            <p>Lixo detectado até agora: <span id="totalTrash">0</span> toneladas</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
