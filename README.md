@@ -1,6 +1,34 @@
-app.js Documentation
-<h1>Code Documentation: Trash Detection Simulation</h1>
+Code Documentation: Marine Pollution Detection Application
 General Description
-This script is responsible for initiating the webcam, simulating the detection of trash, and updating the user interface with the number of detected trash items and the total amount detected in tons.
+This HTML file serves as the main interface for the Marine Pollution Detection application. It incorporates a carousel of images, a live detection section for monitoring trash, and informative sections about marine pollution risks. The design is user-friendly and emphasizes the importance of ocean conservation.
 
-<h2>Variables</h2> <b>totalTrashDetected:</b> A variable that keeps track of the total amount of trash detected over time, initialized to zero. <h2>Event Listeners</h2> <b>document.getElementById('startDetection').addEventListener('click', function() {...});</b><br> This event listener is triggered when the "Iniciar Detecção" button is clicked. It initiates the webcam and starts the trash detection simulation. <h3>Webcam Initialization</h3> When the button is clicked, the script attempts to access the webcam using the <b>navigator.mediaDevices.getUserMedia</b> method. If successful, the video stream is displayed in the <b>video</b> element with the ID <b>webcam</b>.<br> If there’s an error while accessing the webcam, it logs an error message to the console. <h3>Trash Detection Simulation</h3> <b>setInterval(() => {...}, 5000);</b><br> This function simulates the detection of trash every 5 seconds. Inside the interval function: - A random number of detected items is generated using <b>Math.floor(Math.random() * 5)</b>, simulating between 0 to 4 trash items detected. - The total detected trash count is updated by adding the newly detected items to <b>totalTrashDetected</b>. - The text content of the element with the ID <b>detected-trash</b> is updated to display the number of detected items. - The total trash detected is converted from grams to tons by dividing <b>totalTrashDetected</b> by 1000 and is displayed in the element with the ID <b>totalTrash</b>. <h1>Final Considerations</h1> This script serves as a basic implementation for trash detection simulation in a web application. The webcam integration allows for real-time interaction, while the random detection simulation provides a foundation for integrating actual AI-powered trash detection in the future.
+Structure
+Header
+The header section contains a carousel that displays images related to ocean conservation and marine pollution detection.
+
+Carousel
+Images: Two images are included, showcasing a clean ocean and the role of technology in monitoring marine waste.
+Text Overlay: Each slide has a text overlay promoting ocean conservation.
+Live Detection Section
+This section allows users to view real-time detection of trash.
+
+Video Element (<video id="webcam">): Displays the live feed from the user's webcam.
+Statistics Display (<div class="stats">): Shows the number of detected trash items:
+Detected Trash: Displays the number of items detected in real-time.
+Start Detection Button (<button id="startDetection">):
+On click, it initializes the webcam and starts the trash detection simulation.
+Information Section
+This section provides educational content about various types of marine pollution.
+
+Pollution Risks:
+Each information box includes an icon, a heading, and a brief description of different pollution types:
+Plastic Pollution: Highlights the threat of plastic to marine life.
+Oil Spills: Discusses the impact of oil spills on ocean ecosystems.
+Metal Waste: Explains the dangers of metallic materials in the water.
+Footer
+The footer presents a summary of the detected trash:
+
+Detected Trash Summary (<span id="totalTrash">): Shows the total amount of trash detected in tons.
+Final Considerations
+This HTML structure lays the foundation for a web application focused on marine pollution detection. The integration of live video feeds and interactive elements promotes user engagement while raising awareness about ocean conservation.
+
