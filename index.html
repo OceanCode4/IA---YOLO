@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Marine Pollution Detection</title>
     <style>
-        /* Estilos para tornar o vídeo responsivo */
+        /* General Styles */
         * {
             margin: 0;
             padding: 0;
@@ -18,8 +18,6 @@
             background-color: #f0f4f8;
             color: #333;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
         }
 
         header {
@@ -29,7 +27,7 @@
             text-align: center;
         }
 
-        /* Estilos para o carrossel de imagens */
+        /* Carousel Styles */
         .carousel {
             display: flex;
             overflow: hidden;
@@ -57,7 +55,7 @@
             border-radius: 5px;
         }
 
-        /* Seção de detecção de lixo ao vivo */
+        /* Live Detection Section */
         .live-detection {
             text-align: center;
             padding: 40px 20px;
@@ -67,14 +65,13 @@
         .video-container {
             position: relative;
             display: inline-block;
-            margin: 0 auto;
             border: 5px solid #00796b;
             border-radius: 10px;
             padding: 10px;
-            background-color: #ffffff;
+            background-color: #fff;
             width: 100%;
             height: 0;
-            padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
         }
 
         #image {
@@ -83,7 +80,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Mantém a proporção da imagem */
+            object-fit: cover;
         }
 
         .stats {
@@ -106,7 +103,7 @@
             background-color: #004d40;
         }
 
-        /* Seção de informações sobre poluição marinha */
+        /* Marine Pollution Info Section */
         .info-section {
             padding: 50px 20px;
             background-color: #ffffff;
@@ -142,7 +139,7 @@
             }
         }
 
-        /* Rodapé */
+        /* Footer Section */
         footer {
             text-align: center;
             padding: 20px;
@@ -153,17 +150,17 @@
 </head>
 <body>
 
-    <!-- Header com carrossel de imagens -->
+    <!-- Header with Image Carousel -->
     <header>
         <div class="carousel">
             <div class="carousel-slide">
-                <img src="C:\Users\wendy\Downloads\IA---YOLO-main\IA---YOLO-main\csr\1.jpg" alt="Oceano Limpo" class="carousel-image">
+                <img src="https://source.unsplash.com/featured/?ocean-clean" alt="Oceano Limpo" class="carousel-image">
                 <div class="carousel-text">
                     Save the ocean, reduce pollution.
                 </div>
             </div>
             <div class="carousel-slide">
-                <img src="C:\Users\wendy\Downloads\IA---YOLO-main\IA---YOLO-main\csr\2.jpg" alt="Detecção de Lixo" class="carousel-image">
+                <img src="https://source.unsplash.com/featured/?marine-litter" alt="Detecção de Lixo" class="carousel-image">
                 <div class="carousel-text">
                     Technology helps monitor marine litter.
                 </div>
@@ -171,266 +168,56 @@
         </div>
     </header>
 
-    <!-- Seção de detecção de lixo ao vivo -->
+    <!-- Live Trash Detection Section -->
     <section class="live-detection">
         <h2>Live Trash Detection</h2>
         <div class="video-container">
-            <img id="image" src="C:\Users\wendy\Downloads\IA---YOLO-main\IA---YOLO-main\csr\2.jpg" alt="Live Trash Detection Image">
+            <img id="image" src="https://source.unsplash.com/featured/?ocean" alt="Live Trash Detection Image">
             <div class="stats">
                 <h3>Start Detection</h3>
-                <p id="detected-trash">0 itens</p>
+                <p id="detected-trash">0 items</p>
             </div>
         </div>
         <button id="startDetection">Start Detection</button>
     </section>
 
-    <!-- Informações sobre poluição marinha -->
+    <!-- Marine Pollution Info Section -->
     <section class="info-section">
         <h2>Marine Pollution Risks</h2>
         <div class="info-grid">
             <div class="info-box">
-                <img src="C:\Users\wendy\Downloads\IA---YOLO-main\IA---YOLO-main\csr\4.jpg" alt="Poluição por Plástico">
+                <img src="https://source.unsplash.com/featured/?plastic-pollution" alt="Plastic Pollution">
                 <h3>Plastic Pollution</h3>
                 <p>Plastic is one of the main threats to the oceans, affecting marine life.</p>
             </div>
             <div class="info-box">
-                <img src="C:\Users\wendy\Downloads\IA---YOLO-main\IA---YOLO-main\csr\" alt="Derramamento de Óleo">
+                <img src="https://source.unsplash.com/featured/?oil-spill" alt="Oil Spill">
                 <h3>Oil Spill</h3>
                 <p>Oil spills create dead zones in the oceans, devastating ecosystems.</p>
             </div>
             <div class="info-box">
-                <img src="C:\Users\wendy\Downloads\IA---YOLO-main\IA---YOLO-main\csr\6.jpg" alt="Resíduos Metálicos">
+                <img src="https://source.unsplash.com/featured/?metal-waste" alt="Metal Waste">
                 <h3>Metal Waste</h3>
                 <p>Metallic materials pollute water and are difficult to remove.</p>
             </div>
         </div>
     </section>
 
-    <!-- Rodapé com dados ao vivo -->
+    <!-- Footer Section -->
     <footer>
         <div class="footer-content">
-            <p>Trash detected so far: <span id="totalTrash">0</span> toneladas</p>
+            <p>Trash detected so far: <span id="totalTrash">0</span> tons</p>
         </div>
     </footer>
 
-    <script src="app.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Marine Pollution Detection</title>
-    <style>
-        /* Estilos para tornar o vídeo responsivo */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-        }
+    <script>
+        let trashCount = 0;
 
-        body {
-            background-color: #f0f4f8;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            width: 100%;
-            background: #e0f7fa;
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Estilos para o carrossel de imagens */
-        .carousel {
-            display: flex;
-            overflow: hidden;
-        }
-
-        .carousel-slide {
-            position: relative;
-            width: 100%;
-        }
-
-        .carousel img {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-        }
-
-        .carousel-text {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-
-        /* Seção de detecção de lixo ao vivo */
-        .live-detection {
-            text-align: center;
-            padding: 40px 20px;
-            background-color: #e3f2fd;
-        }
-
-        .video-container {
-            position: relative;
-            display: inline-block;
-            margin: 0 auto;
-            border: 5px solid #00796b;
-            border-radius: 10px;
-            padding: 10px;
-            background-color: #ffffff;
-            width: 100%;
-            height: 0;
-            padding-bottom: 56.25%; /* Aspect ratio 16:9 */
-        }
-
-        #image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Mantém a proporção da imagem */
-        }
-
-        .stats {
-            margin-top: 20px;
-            font-size: 1.2em;
-            color: #00796b;
-        }
-
-        button {
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: #00796b;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #004d40;
-        }
-
-        /* Seção de informações sobre poluição marinha */
-        .info-section {
-            padding: 50px 20px;
-            background-color: #ffffff;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .info-box {
-            background-color: #f1f8e9;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .info-box img {
-            width: 80px;
-            height: auto;
-        }
-
-        @media (max-width: 768px) {
-            .info-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Rodapé */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #00796b;
-            color: white;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Header com carrossel de imagens -->
-    <header>
-        <div class="carousel">
-            <div class="carousel-slide">
-                <img src="C:\Users\wendy\Downloads\IA---YOLO-main\IA---YOLO-main\csr\1.jpg" alt="Oceano Limpo" class="carousel-image">
-                <div class="carousel-text">
-                    Save the ocean, reduce pollution.
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="C:\Users\wendy\Downloads\IA---YOLO-main\IA---YOLO-main\csr\2.jpg" alt="Detecção de Lixo" class="carousel-image">
-                <div class="carousel-text">
-                    Technology helps monitor marine litter.
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Seção de detecção de lixo ao vivo -->
-    <section class="live-detection">
-        <h2>Live Trash Detection</h2>
-        <div class="video-container">
-            <img id="image" src="C:\Users\wendy\Downloads\IA---YOLO-main\IA---YOLO-main\csr\2.jpg" alt="Live Trash Detection Image">
-            <div class="stats">
-                <h3>Start Detection</h3>
-                <p id="detected-trash">0 itens</p>
-            </div>
-        </div>
-        <button id="startDetection">Start Detection</button>
-    </section>
-
-    <!-- Informações sobre poluição marinha -->
-    <section class="info-section">
-        <h2>Marine Pollution Risks</h2>
-        <div class="info-grid">
-            <div class="info-box">
-                <img src="C:\Users\wendy\Downloads\IA---YOLO-main\IA---YOLO-main\csr\4.jpg" alt="Poluição por Plástico">
-                <h3>Plastic Pollution</h3>
-                <p>Plastic is one of the main threats to the oceans, affecting marine life.</p>
-            </div>
-            <div class="info-box">
-                <img src="C:\Users\wendy\Downloads\IA---YOLO-main\IA---YOLO-main\csr\" alt="Derramamento de Óleo">
-                <h3>Oil Spill</h3>
-                <p>Oil spills create dead zones in the oceans, devastating ecosystems.</p>
-            </div>
-            <div class="info-box">
-                <img src="C:\Users\wendy\Downloads\IA---YOLO-main\IA---YOLO-main\csr\6.jpg" alt="Resíduos Metálicos">
-                <h3>Metal Waste</h3>
-                <p>Metallic materials pollute water and are difficult to remove.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rodapé com dados ao vivo -->
-    <footer>
-        <div class="footer-content">
-            <p>Trash detected so far: <span id="totalTrash">0</span> toneladas</p>
-        </div>
-    </footer>
-
-    <script src="app.js"></script>
+        document.getElementById('startDetection').addEventListener('click', function() {
+            trashCount++;
+            document.getElementById('detected-trash').innerText = trashCount + ' items';
+            document.getElementById('totalTrash').innerText = trashCount;
+        });
+    </script>
 </body>
 </html>
