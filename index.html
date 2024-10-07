@@ -6,6 +6,69 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Marine Pollution Detection</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos para tornar o vídeo responsivo */
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            overflow: hidden;
+        }
+
+        #video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Ajustes de estilo adicionais para a página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header, footer, section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .carousel-slide {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .info-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .info-box {
+            background: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: calc(33% - 40px); /* Ajuste conforme necessário */
+        }
+
+        @media (max-width: 768px) {
+            .info-box {
+                width: calc(50% - 40px); /* Reduzir para 2 colunas em telas menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .info-box {
+                width: 100%; /* Uma coluna em telas muito pequenas */
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -13,59 +76,63 @@
     <header>
         <div class="carousel">
             <div class="carousel-slide">
-                <img src="image1.jpg" alt="Oceano Limpo">
+                <img src="C:\Users\wendy\Pictures\Nova pasta\1.jpg" alt="Oceano Limpo" class="carousel-image">
                 <div class="carousel-text">
-                    Salve o oceano, reduza a poluição.
+                    Save the ocean, reduce pollution.
                 </div>
             </div>
             <div class="carousel-slide">
-                <img src="image2.jpg" alt="Detecção de Lixo">
+                <img src="C:\Users\wendy\Pictures\Nova pasta\2.jpg" alt="Detecção de Lixo" class="carousel-image">
                 <div class="carousel-text">
-                    A tecnologia ajuda a monitorar o lixo marinho.
+                    Technology helps monitor marine litter.
                 </div>
             </div>
         </div>
     </header>
+    
 
     <!-- Seção de detecção de lixo ao vivo -->
     <section class="live-detection">
-        <h2>Detecção de Lixo ao Vivo</h2>
+        <h2>Live Trash Detection</h2>
         <div class="video-container">
-            <video id="webcam" autoplay></video>
+            <!-- Substituindo o vídeo por uma imagem -->
+            <img id="image" src="C:\Users\wendy\Pictures\Nova pasta\2.jpg" alt="Live Trash Detection Image" width="100%"> <!-- Altere "images/detection.jpg" para o caminho da sua imagem -->
             <div class="stats">
-                <h3>Lixo detectado:</h3>
+                <h3>Start Detection</h3>
                 <p id="detected-trash">0 itens</p>
             </div>
         </div>
-        <button id="startDetection">Iniciar Detecção</button>
+        <button id="startDetection">Start Detection</button>
     </section>
+    
 
     <!-- Informações sobre poluição marinha -->
     <section class="info-section">
-        <h2>Riscos da Poluição Marinha</h2>
+        <h2>Marine Pollution Risks</h2>
         <div class="info-grid">
             <div class="info-box">
-                <img src="plastic-icon.png" alt="Poluição por Plástico">
-                <h3>Poluição por Plástico</h3>
-                <p>O plástico é uma das principais ameaças aos oceanos, afetando a vida marinha.</p>
+                <img src="C:\Users\wendy\Pictures\Nova pasta/4.jpg" alt="Poluição por Plástico">
+                <h3>Plastic Pollution</h3>
+                <p>Plastic is one of the main threats to the oceans, affecting marine life.</p>
             </div>
             <div class="info-box">
-                <img src="oil-icon.png" alt="Derramamento de Óleo">
-                <h3>Derramamento de Óleo</h3>
-                <p>Derramamentos de óleo criam zonas mortas nos oceanos, devastando ecossistemas.</p>
+                <img src="C:\Users\wendy\Pictures\Nova pasta/5.jpg" alt="Derramamento de Óleo">
+                <h3>Oil Spill</h3>
+                <p>Oil spills create dead zones in the oceans, devastating ecosystems.</p>
             </div>
             <div class="info-box">
-                <img src="metal-icon.png" alt="Resíduos Metálicos">
-                <h3>Resíduos Metálicos</h3>
-                <p>Materiais metálicos poluem a água e são difíceis de remover.</p>
+                <img src="C:\Users\wendy\Pictures\Nova pasta/6.jpg" alt="Resíduos Metálicos">
+                <h3>Metal Waste</h3>
+                <p>Metallic materials pollute water and are difficult to remove.</p>
             </div>
         </div>
     </section>
+    
 
     <!-- Rodapé com dados ao vivo -->
     <footer>
         <div class="footer-content">
-            <p>Lixo detectado até agora: <span id="totalTrash">0</span> toneladas</p>
+            <p>Trash detected so far: <span id="totalTrash">0</span> toneladas</p>
         </div>
     </footer>
 
