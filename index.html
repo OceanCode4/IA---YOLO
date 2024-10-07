@@ -146,6 +146,10 @@
             background-color: #00796b;
             color: white;
         }
+
+        .footer-content {
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
@@ -154,25 +158,34 @@
     <header>
         <div class="carousel">
             <div class="carousel-slide">
-                <img src="https://source.unsplash.com/featured/?ocean-clean" alt="Oceano Limpo" class="carousel-image">
+                <img src="https://source.unsplash.com/featured/?ocean,clean" alt="Clean Ocean" class="carousel-image">
                 <div class="carousel-text">
                     Save the ocean, reduce pollution.
                 </div>
             </div>
             <div class="carousel-slide">
-                <img src="https://source.unsplash.com/featured/?marine-litter" alt="Detecção de Lixo" class="carousel-image">
+                <img src="https://source.unsplash.com/featured/?marine,pollution" alt="Trash Detection" class="carousel-image">
                 <div class="carousel-text">
                     Technology helps monitor marine litter.
                 </div>
             </div>
         </div>
+        <p style="margin-top: 20px; font-size: 1.2em; color: #00796b;">
+            "Continue the game experience in the real world."
+        </p>
+        <p style="margin-top: 10px; font-size: 1em; color: #00796b;">
+            Start the change through your camera and help our scientists receive data from your location.
+        </p>
     </header>
 
     <!-- Live Trash Detection Section -->
     <section class="live-detection">
         <h2>Live Trash Detection</h2>
+        <p style="margin-bottom: 20px; font-size: 1em;">
+            By pointing your camera, an AI will filter and measure pollution levels, sending the data to scientists who will analyze it.
+        </p>
         <div class="video-container">
-            <img id="image" src="https://source.unsplash.com/featured/?ocean" alt="Live Trash Detection Image">
+            <img id="image" src="https://source.unsplash.com/featured/?pollution" alt="Live Trash Detection Image">
             <div class="stats">
                 <h3>Start Detection</h3>
                 <p id="detected-trash">0 items</p>
@@ -186,17 +199,17 @@
         <h2>Marine Pollution Risks</h2>
         <div class="info-grid">
             <div class="info-box">
-                <img src="https://source.unsplash.com/featured/?plastic-pollution" alt="Plastic Pollution">
+                <img src="https://source.unsplash.com/featured/?plastic,ocean" alt="Plastic Pollution">
                 <h3>Plastic Pollution</h3>
                 <p>Plastic is one of the main threats to the oceans, affecting marine life.</p>
             </div>
             <div class="info-box">
-                <img src="https://source.unsplash.com/featured/?oil-spill" alt="Oil Spill">
+                <img src="https://source.unsplash.com/featured/?oil,spill" alt="Oil Spill">
                 <h3>Oil Spill</h3>
                 <p>Oil spills create dead zones in the oceans, devastating ecosystems.</p>
             </div>
             <div class="info-box">
-                <img src="https://source.unsplash.com/featured/?metal-waste" alt="Metal Waste">
+                <img src="https://source.unsplash.com/featured/?metal,waste" alt="Metal Waste">
                 <h3>Metal Waste</h3>
                 <p>Metallic materials pollute water and are difficult to remove.</p>
             </div>
@@ -206,18 +219,9 @@
     <!-- Footer Section -->
     <footer>
         <div class="footer-content">
-            <p>Trash detected so far: <span id="totalTrash">0</span> tons</p>
+            <p>© 2024 Ocean Code. Developed by Ocean Code.</p>
         </div>
     </footer>
 
-    <script>
-        let trashCount = 0;
-
-        document.getElementById('startDetection').addEventListener('click', function() {
-            trashCount++;
-            document.getElementById('detected-trash').innerText = trashCount + ' items';
-            document.getElementById('totalTrash').innerText = trashCount;
-        });
-    </script>
 </body>
 </html>
