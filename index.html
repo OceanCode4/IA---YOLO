@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Marine Pollution Detection</title>
-    <link rel="stylesheet" href="style.css">
     <style>
         /* Estilos para tornar o vídeo responsivo */
         .video-container {
@@ -16,12 +15,13 @@
             overflow: hidden;
         }
 
-        #video {
+        #image {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            object-fit: cover; /* Mantém a proporção da imagem */
         }
 
         /* Ajustes de estilo adicionais para a página */
@@ -37,9 +37,31 @@
             text-align: center;
         }
 
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+        }
+
         .carousel-slide {
             display: inline-block;
             margin: 10px;
+            position: relative;
+        }
+
+        .carousel-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .carousel-text {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-size: 1.5em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         .info-grid {
@@ -67,6 +89,29 @@
             .info-box {
                 width: 100%; /* Uma coluna em telas muito pequenas */
             }
+        }
+
+        footer {
+            background-color: #00796b;
+            color: white;
+        }
+
+        footer .footer-content {
+            font-size: 1.2em;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #004d40;
         }
     </style>
 </head>
@@ -111,17 +156,17 @@
         <h2>Marine Pollution Risks</h2>
         <div class="info-grid">
             <div class="info-box">
-                <img src="C:\Users\wendy\Pictures\Nova pasta/4.jpg" alt="Poluição por Plástico">
+                <img src="C:\Users\wendy\Pictures\Nova pasta\4.jpg" alt="Poluição por Plástico">
                 <h3>Plastic Pollution</h3>
                 <p>Plastic is one of the main threats to the oceans, affecting marine life.</p>
             </div>
             <div class="info-box">
-                <img src="C:\Users\wendy\Pictures\Nova pasta/5.jpg" alt="Derramamento de Óleo">
+                <img src="C:\Users\wendy\Pictures\Nova pasta\5.jpg" alt="Derramamento de Óleo">
                 <h3>Oil Spill</h3>
                 <p>Oil spills create dead zones in the oceans, devastating ecosystems.</p>
             </div>
             <div class="info-box">
-                <img src="C:\Users\wendy\Pictures\Nova pasta/6.jpg" alt="Resíduos Metálicos">
+                <img src="C:\Users\wendy\Pictures\Nova pasta\6.jpg" alt="Resíduos Metálicos">
                 <h3>Metal Waste</h3>
                 <p>Metallic materials pollute water and are difficult to remove.</p>
             </div>
